@@ -11,6 +11,7 @@ const destreamify = (str: string) => {
 
 describe("POST /api/chat", () => {
   it("should return a valid recipe", async () => {
+    console.time("setup");
     // User input
     const content = "Tomatoes, box of pasta, olive oil, and some spices";
 
@@ -30,6 +31,9 @@ describe("POST /api/chat", () => {
     const respText = destreamify(await res.text());
 
     // Check if the response text fulfills the criterion
-    await expect(respText).toFulfillCriterion("Returns a recipe");
+    await expect(respText).toFulfillCriterion("Provides a recipe");
+    await expect(respText).toFulfillCriterion(
+      "The provided recipe uses tomatoes"
+    );
   });
 }, 30000);
