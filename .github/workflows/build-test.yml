@@ -28,3 +28,8 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: Test
+        run: npm run test:ci
+        env:
+          POYRO_API_KEY: ${{ secrets.POYRO_API_KEY }}
