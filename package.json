@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
+    "test:ci": "CI=true vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -20,7 +21,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@poyro/vitest": "^0.6.0",
+    "@poyro/vitest": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

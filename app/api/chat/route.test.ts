@@ -11,9 +11,9 @@ const destreamify = (str: string) => {
 
 describe("POST /api/chat", () => {
   it("should return a valid recipe", async () => {
-    console.time("setup");
     // User input
-    const content = "Tomatoes, box of pasta, olive oil, and some spices";
+    const content =
+      "Give me a pasta recipe using tomatoes, box of pasta, olive oil, and some spices";
 
     // Create a new request
     const request = new NextRequest(`${baseUrl}/api/chat`, {
